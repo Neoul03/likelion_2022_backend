@@ -1,0 +1,16 @@
+footer{
+    text-align: center;
+    background-color: #121212;
+    color: #919191;
+    font-size: 12px;
+}
+
+div.mainbox {
+    border: 2px solid #bebdbd;
+    width: 610px;
+    margin: 30px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
