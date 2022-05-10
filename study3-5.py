@@ -1,0 +1,6 @@
+city = "Seoul"
+apikey = "35ec83f2af53b72e4059d1e8892cd03e"
+
+api = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}"
+
+print(api)

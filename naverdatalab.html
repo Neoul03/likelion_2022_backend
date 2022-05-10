@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200">
+    <title>네이버 데이터랩</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.datalab/202203250433/css/datalab.css">
+    <link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.datalab/202203250433/css/graph.css">
+
+    <link rel="icon" sizes="192x192" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/android_legacy_xxxhpdi_192x192.png" >
+    <link rel="icon" sizes="144x144" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/android_legacy_xxhpdi_144x144.png" >
+    <link rel="icon" sizes="96x96" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/android_legacy_xhdpi_96x96.png" >
+    <link rel="icon" sizes="72x72" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/android_legacy_hdpi_72X72.png" >
+
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/iOS_iPhone@3x_180X180.png">
+    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/iOS_iPadPro@2x_167X167.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/iOS_iPad@2x_152X152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://ssl.pstatic.net/static.datalab/202203250433/img/favicon/iOS_iPhone@2x_120X120.png">
+    
+    
+    <meta property="og:title" content="네이버 데이터랩"/>
+    <meta property="og:url" content="https://datalab.naver.com/"/>
+    <meta property="og:image" content="https://ssl.pstatic.net/static.datalab/img2019/datalab_og_244x244.jpg"/>
+    <meta property="og:description" content="네이버의 검색 트렌드 및 급상승검색어 이력, 쇼핑 카테고리별 검색 트렌드 제공"/>
+    <meta name="description" content="네이버의 검색 트렌드 및 급상승검색어 이력, 쇼핑 카테고리별 검색 트렌드 제공">
+
+</head>
+
+<!--[if lte IE 9]>
+<body class="pop_opened">
+<![endif]-->
+
+<![if !IE]>
+<body>
+<![endif]>
+
+<div id="u_skip">
+    <a href="#content"><span>본문으로 바로가기</span></a>
+</div>
+<div id="wrap" class="wrap">
+    <div id="header" class="header">
+        <div class="inner">
+            <div class="srch_wrap">
+                <a href="https://www.naver.com" target="_blank" class="logo_area">
+                    <span class="sp_header_logo"><span class="blind">NAVER</span></span>
+                </a>
+                <h1 class="sta_area">
+                    <a href="/" class="sp_sta"><span class="blind">DataLab</span></a>
+                </h1>
+            </div>
+            <div class="gnb_wrap">
+                <div id="gnb"></div>
+            </div>
+        </div>
+        <div id="lnb" class="lnb">
+            <div class="lnb_innner">
+                <ul class="lnb_list">
+                    <li class="list _home active">
+                        <a href="/" class="list_area">
+                        <span class="sp_lnb_list nav1">
+                            <span class="blind">데이터랩 홈</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list _keyword ">
+                        <a href="/keyword/trendSearch.naver" class="list_area">
+                        <span class="sp_lnb_list nav3">
+                            <span class="blind">검색어트렌드</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list _shopping ">
+                        <a href="/shoppingInsight/sCategory.naver" class="list_area">
+							<span class="sp_lnb_list nav4">
+								<span class="blind">쇼핑인사이트</span>
+							</span>
+                        </a>
+                    </li>
+                    <li class="list _local ">
+                        <a href="/local/trend.naver" class="list_area">
+                        <span class="sp_lnb_list nav5">
+                            <span class="blind">지역통계</span>
+                        </span>
+                        </a>
+                    </li>
+                    <li class="list _commentStat ">
+                        <a href="/commentStat/news.naver" class="list_area">
+                        <span class="sp_lnb_list nav6">
+                            <span class="blind">뉴스댓글통계</span>
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div id="container" class="container" role="main">
+    <div id="content" class="content">
+<div class="spot section_keyword" data-pagetype="sKeyword">
+<!-- HOME title -->
+    <div class="spot_title">
+        <h3 class="title">
+            쇼핑인사이트
+        </h3>
+        <em class="desc">쇼핑 분야별 클릭 추이와 분야별 검색어 현황을 확인할 수 있습니다.</em>
+    </div>
+    <!-- //HOME title -->
+    <!-- HOME tab -->
+    <div class="tab_list_area">
+        <div class="title_list">
+            <!-- [D] 선택시 on추가 필요 -->
+            <h3 class="list on">
+                <a href="/" class="list_itm">분야별 인기 검색어</a>
+                <span class="blind">선택됨</span>
+            </h3>
+            <h3 class="list">
+                <a href="/home/sectionSearch.naver" class="list_itm">인기분야</a>
+            </h3>
+        </div>
+    </div>
+    <!-- //HOME tab -->
+    <div class="section main_tab_opt">
+        <div class="select depth _dropdown" data-default-cid="50000000">
+            <!-- [D] 활성화 class="active" -->
+                <a href="#" class="select_btn">패션의류</a>
+            <ul class="select_list scroll_cst">
+                <li class="active">
+                    <a href="#" class="option" data-cid="50000000">패션의류</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000001">패션잡화</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000002">화장품/미용</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000003">디지털/가전</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000004">가구/인테리어</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000005">출산/육아</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000006">식품</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000007">스포츠/레저</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000008">생활/건강</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000009">여가/생활편의</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50000010">면세점</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-cid="50005542">도서</a>
+                </li>
+            </ul>
+        </div>
+        <div class="select period _dropdown">
+            <!-- [D] 활성화 class="active" -->
+            <a href="#" class="select_btn">일간</a>
+            <ul class="select_list scroll_cst">
+                <li class="active">
+                    <a href="#" class="option" data-time-dimension="date">일간</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-time-dimension="week">주간</a>
+                </li>
+                <li class="">
+                    <a href="#" class="option" data-time-dimension="month">월간</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 분야별 인기 검색어 -->
+    <!-- [D]분야별/인기분야 활성화 클래스 active 추가 -->
+    <div class="home_section active">
+        <div class="keyword_area real_time">
+            <div class="keyword_carousel">
+                <div class="jcarousel _carousel">
+                    <div class="carousel_area" style="width:5000px;">
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.04.26.(화)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%A8%EC%9E%90%EB%8B%88%ED%8A%B8" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">남자니트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.04.27.(수)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%9B%84%EB%93%9C%ED%8B%B0" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">후드티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%A8%EC%9E%90%EB%8B%88%ED%8A%B8" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">남자니트</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%B9%B4%EB%9D%BC%ED%8B%B0%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">카라티셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A7%A8%ED%88%AC%EB%A7%A8" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">맨투맨</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%A8%EC%9E%90%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">남자반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.04.28.(목)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.04.29.(금)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.04.30.(토)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.01.(일)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%97%AC%EC%84%B1%EB%A6%B0%EB%84%A8%EC%9E%90%EC%BC%93" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">여성린넨자켓</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">바람막이</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.02.(월)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.03.(화)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.04.(수)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EA%B9%80%EA%B1%B4%ED%9D%AC%EC%B9%98%EB%A7%88" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">김건희치마</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.05.(목)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EA%B9%80%EA%B1%B4%ED%9D%AC%EC%B9%98%EB%A7%88" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">김건희치마</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%8C%AC%EC%B8%A0" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">팬츠</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.06.(금)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%97%AC%EB%A6%84%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">여름원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%95%98%EA%B0%9D%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">하객원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="keyword_rank">
+                            <div class="rank_inner v2">
+                                    <strong class="rank_title">
+                                        <span class="title_cell">2022.05.07.(토)</span>
+                                    </strong>
+                                    <div class="rank_scroll" style="left:0px; width:5000px;">
+                                        <ul class="rank_list">
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">1</em>
+                                                        <span class="title">원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%ED%8C%94%ED%8B%B0" class="list_area">
+                                                        <em class="num">2</em>
+                                                        <span class="title">반팔티</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B0%98%EB%B0%94%EC%A7%80" class="list_area">
+                                                        <em class="num">3</em>
+                                                        <span class="title">반바지</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%8D%A8%EC%8A%A4%EB%8D%B0%EC%9D%B4%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">4</em>
+                                                        <span class="title">써스데이아일랜드원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%85%94%EC%B8%A0" class="list_area">
+                                                        <em class="num">5</em>
+                                                        <span class="title">셔츠</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%B8%94%EB%9D%BC%EC%9A%B0%EC%8A%A4" class="list_area">
+                                                        <em class="num">6</em>
+                                                        <span class="title">블라우스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4" class="list_area">
+                                                        <em class="num">7</em>
+                                                        <span class="title">나이키바람막이</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EB%A1%B1%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">8</em>
+                                                        <span class="title">롱원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%EC%97%AC%EB%A6%84%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">9</em>
+                                                        <span class="title">여름원피스</span>
+                                                    </a>
+                                                </li>
+                                                <li class="list">
+                                                    <a href="/shoppingInsight/sKeyword.naver?keyword=%ED%95%98%EA%B0%9D%EC%9B%90%ED%94%BC%EC%8A%A4" class="list_area">
+                                                        <em class="num">10</em>
+                                                        <span class="title">하객원피스</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="keyword_btn_prev jcarousel-control-prev">
+                        <span class="sp_keyword_btn_prev">
+                            <span class="blind">이전 인기 검색어 보기</span>
+                        </span>
+                    </a>
+                    <a href="#" class="keyword_btn_next jcarousel-control-next off">
+                        <span class="sp_keyword_btn_next">
+                            <span class="blind">다음 인기 검색어 보기</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="keyword_notice">
+                <a href="/shoppingInsight/sKeyword.naver" class="btn_more_keyword">검색어 통계 자세히 보기</a>
+            </div>
+        </div>
+    </div>
+    <!-- //분야별 인기 검색어 -->
+</div>
+
+<template type="text/template" id="si_card" style="display:none">
+    <div class="keyword_rank">
+        <div class="rank_inner v2">
+            <strong class="rank_title">
+                <span class="title_cell">
+                    <span class="datetime">{=datetime}</span>
+                    <span class="period"><em>{=range}</em></span>
+                </span>
+            </strong>
+            <div class="rank_scroll">
+                <ul class="rank_list">
+                    {=rank_list}
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template type="text/template" id="si_card_error" style="display:none">
+    <div class="keyword_rank">
+        <div class="rank_inner v2">
+            <strong class="rank_title">
+                <span class="title_cell">
+                    <span class="datetime">{=datetime}</span>
+                    <span class="period"><em>{=range}</em></span>
+                </span>
+            </strong>
+            <div class="com_guide_error">
+                <div class="error_area">
+                    <div class="error_desc">
+                        <span class="sp_com_warn"></span>
+                        <strong class="desc_em">현재 데이터를 불러올 수 없습니다.</strong>
+                        네이버 내 다른 서비스의 API 호출 오류입니다.<br>
+                        빠른 시간 내에 조치하도록 하겠습니다.<br>
+                        죄송하지만 잠시 후에 다시 조회하여 주시기 바랍니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template type="text/template" id="si_rank_item" style="display:none">
+    <li class="list">
+        <a href="/shoppingInsight/sKeyword.naver?keyword={=encodeKeyword}" class="list_area">
+            <em class="num">{=rank}</em>
+            <span class="title">{=keyword}</span>
+        </a>
+    </li>
+</template>        <div class="_search_trend_wrapper">
+            <div class="com_title">
+                <h4 class="title">검색어 트렌드</h4>
+            </div>
+            <div class="section_banner w_space">
+                <div class="banner_inner">
+                    <p class="title">
+                        <span class="txt">네이버에서 얼마나 많이 검색되는지 궁금한 주제가 있으신가요? 네이버 검색데이터를 직접 조회해 보세요!</span>
+                    </p>
+                    <p class="guide_desc">
+                        궁금한 주제어를 설정하고, 하위 주제어에 해당하는 검색어를 콤마(,)로 구분 입력해 주세요. 입력한 단어의 추이를 하나로 합산하여 해당 주제가 네이버에서 얼마나 검색되는지 관련 데이터를 제공합니다.
+                    </p>
+                    <p class="guide_desc point">
+                        예) 주제어 캠핑 : 캠핑, Camping, 캠핑용품, 겨울캠핑, 캠핑장, 글랩핑, 오토캠핑, 캠핑카, 텐트, 캠핑요리
+                    </p>
+                </div>
+            </div>
+            <div class="keyword_trend">
+                <div class="section_step">
+                    <div class="com_box_inner">
+                        <form>
+                            <fieldset>
+                                <legend class="blind">검색어 트렌드 조회</legend>
+                                <div class="step_form">
+
+
+<input type="hidden" id="qcType" value="N" />
+<input type="hidden" id="device" value="" />
+<input type="hidden" id="queryGroups" value=""/>
+<input type="hidden" id="graphData" />
+<input type="hidden" id="startDate"  value=""/>
+<input type="hidden" id="endDate"  value=""/>
+<input type="hidden" id="vTimeDimension"  value="date"/>
+<input type="hidden" id="gender"  value=""/>
+<input type="hidden" id="age"  value=""/>
+<input type="hidden" id="maxYear" value="2022"/>
+<input type="hidden" id="maxMonth" value="05"/>
+
+<div class="form_row keyword">
+    <strong class="title">
+        <label for="item_keyword1">주제어1</label>
+    </strong>
+    <div class="set_keyword">
+        <input type="text" value="" id="item_keyword1" class="input_text w1" placeholder="주제어 1 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+    <div class="set_keyword">
+        <label for="item_keyword1_1" class="blind">주제어1 하위 주제어</label>
+        <input type="text" value="" id="item_sub_keyword1_1" class="input_text w2"
+               placeholder="주제어 1에 해당하는 모든 검색어를 컴마(,)로 구분하여 최대 20개까지 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+</div>
+<div class="form_row keyword">
+    <strong class="title">
+        <label for="item_keyword2">주제어2</label>
+    </strong>
+    <div class="set_keyword">
+        <input type="text" value="" id="item_keyword2" class="input_text w1" placeholder="주제어 2 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+    <div class="set_keyword">
+        <label for="item_keyword2_1" class="blind">주제어2 하위 주제어</label>
+        <input type="text" value="" id="item_sub_keyword2_1" class="input_text w2"
+               placeholder="주제어 2에 해당하는 모든 검색어를 컴마(,)로 구분하여 최대 20개까지 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+</div>
+<div class="form_row keyword">
+    <strong class="title">
+        <label for="item_keyword3">주제어3</label>
+    </strong>
+    <div class="set_keyword">
+        <input type="text" value="" id="item_keyword3" class="input_text w1" placeholder="주제어 3 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+    <div class="set_keyword">
+        <label for="item_keyword2_1" class="blind">주제어3 하위 주제어</label>
+        <input type="text" value="" id="item_sub_keyword3_1" class="input_text w2"
+               placeholder="주제어 3에 해당하는 모든 검색어를 컴마(,)로 구분하여 최대 20개까지 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+</div>
+<div class="form_row keyword">
+    <strong class="title">
+        <label for="item_keyword4">주제어4</label>
+    </strong>
+    <div class="set_keyword">
+        <input type="text" value="" id="item_keyword4" class="input_text w1" placeholder="주제어 4 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+    <div class="set_keyword">
+        <label for="item_keyword2_1" class="blind">주제어4 하위 주제어</label>
+        <input type="text" value="" id="item_sub_keyword4_1" class="input_text w2"
+               placeholder="주제어 4에 해당하는 모든 검색어를 컴마(,)로 구분하여 최대 20개까지 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+</div>
+<div class="form_row keyword">
+    <strong class="title">
+        <label for="item_keyword5">주제어5</label>
+    </strong>
+    <div class="set_keyword">
+        <input type="text" value="" id="item_keyword5" class="input_text w1" placeholder="주제어 5 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+    <div class="set_keyword">
+        <label for="item_keyword2_1" class="blind">주제어5 하위 주제어</label>
+        <input type="text" value="" id="item_sub_keyword5_1" class="input_text w2"
+               placeholder="주제어 5에 해당하는 모든 검색어를 컴마(,)로 구분하여 최대 20개까지 입력" data-text="">
+<button type="button" class="btn_keyword_del"><span class="sp_btn_keyword_del"><span class="blind">입력 내용 삭제</span></span></button>
+    </div>
+</div>
+<div class="form_row hr">
+	<strong class="title">기간</strong>
+    <div class="set_period">
+        <input type="radio" name="item_period" id="set_period1" class="blind">
+        <label for="set_period1" class="period ">전체</label>
+        <input type="radio" name="item_period" id="set_period2" class="blind">
+        <label for="set_period2" class="period">1개월</label>
+        <input type="radio" name="item_period" id="set_period3" class="blind">
+        <label for="set_period3" class="period">3개월</label>
+        <input type="radio" name="item_period" id="set_period4" class="blind">
+        <label for="set_period4" class="period">1년</label>
+        <input type="radio" name="item_period" id="set_period5" class="blind">
+        <label for="set_period5" class="period input ">직접입력</label>
+
+<div id="timeDimensionDiv" class="select w4">
+    <input type="hidden" id="timeDimension" name="timeDimension" class="_select_input" value="date"/>
+    <a href="#" id="timeDimensionTitle" class="select_btn">일간</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_date active" value="date"><a href="#" class="option">일간</a></li>
+        <li class="select_item _item_week" value="week"><a href="#" class="option">주간</a></li>
+        <li class="select_item _item_month" value="month"><a href="#" class="option">월간</a></li>
+    </ul>
+</div>
+    </div>
+    <div class="set_period_target">
+<div id="startYearDiv" class="select w2" >
+    <input type="hidden" id="startYearInput" name="startYearInput" class="_select_input" value="2016"/>
+    <a href="#" id="startYear" class="select_btn">2016</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_2016"><a href="#" class="option">2016</a></li>
+        <li class="select_item _item_2017"><a href="#" class="option">2017</a></li>
+        <li class="select_item _item_2018"><a href="#" class="option">2018</a></li>
+        <li class="select_item _item_2019"><a href="#" class="option">2019</a></li>
+        <li class="select_item _item_2020"><a href="#" class="option">2020</a></li>
+        <li class="select_item _item_2021"><a href="#" class="option">2021</a></li>
+        <li class="select_item _item_2022"><a href="#" class="option">2022</a></li>
+    </ul>
+</div>
+<div id="startMonthDiv" class="select w3" >
+    <input type="hidden" id="startMonthInput" name="startMonthInput" class="_select_input" value="05"/>
+    <a href="#" id="startMonth" class="select_btn">05</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_01"><a href="#" class="option">01</a></li>
+        <li class="select_item _item_02"><a href="#" class="option">02</a></li>
+        <li class="select_item _item_03"><a href="#" class="option">03</a></li>
+        <li class="select_item _item_04"><a href="#" class="option">04</a></li>
+        <li class="select_item _item_05"><a href="#" class="option">05</a></li>
+        <li class="select_item _item_06"><a href="#" class="option">06</a></li>
+        <li class="select_item _item_07"><a href="#" class="option">07</a></li>
+        <li class="select_item _item_08"><a href="#" class="option">08</a></li>
+        <li class="select_item _item_09"><a href="#" class="option">09</a></li>
+        <li class="select_item _item_10"><a href="#" class="option">10</a></li>
+        <li class="select_item _item_11"><a href="#" class="option">11</a></li>
+        <li class="select_item _item_12"><a href="#" class="option">12</a></li>
+    </ul>
+</div>
+<div id="startDayDiv" class="select w3" >
+    <input type="hidden" id="startDayInput" name="startDayInput" class="_select_input" value="09"/>
+    <a href="#" id="startDay" class="select_btn">09</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_01"><a href="#" class="option">01</a></li>
+        <li class="select_item _item_02"><a href="#" class="option">02</a></li>
+        <li class="select_item _item_03"><a href="#" class="option">03</a></li>
+        <li class="select_item _item_04"><a href="#" class="option">04</a></li>
+        <li class="select_item _item_05"><a href="#" class="option">05</a></li>
+        <li class="select_item _item_06"><a href="#" class="option">06</a></li>
+        <li class="select_item _item_07"><a href="#" class="option">07</a></li>
+        <li class="select_item _item_08"><a href="#" class="option">08</a></li>
+        <li class="select_item _item_09"><a href="#" class="option">09</a></li>
+        <li class="select_item _item_10"><a href="#" class="option">10</a></li>
+        <li class="select_item _item_11"><a href="#" class="option">11</a></li>
+        <li class="select_item _item_12"><a href="#" class="option">12</a></li>
+        <li class="select_item _item_13"><a href="#" class="option">13</a></li>
+        <li class="select_item _item_14"><a href="#" class="option">14</a></li>
+        <li class="select_item _item_15"><a href="#" class="option">15</a></li>
+        <li class="select_item _item_16"><a href="#" class="option">16</a></li>
+        <li class="select_item _item_17"><a href="#" class="option">17</a></li>
+        <li class="select_item _item_18"><a href="#" class="option">18</a></li>
+        <li class="select_item _item_19"><a href="#" class="option">19</a></li>
+        <li class="select_item _item_20"><a href="#" class="option">20</a></li>
+        <li class="select_item _item_21"><a href="#" class="option">21</a></li>
+        <li class="select_item _item_22"><a href="#" class="option">22</a></li>
+        <li class="select_item _item_23"><a href="#" class="option">23</a></li>
+        <li class="select_item _item_24"><a href="#" class="option">24</a></li>
+        <li class="select_item _item_25"><a href="#" class="option">25</a></li>
+        <li class="select_item _item_26"><a href="#" class="option">26</a></li>
+        <li class="select_item _item_27"><a href="#" class="option">27</a></li>
+        <li class="select_item _item_28"><a href="#" class="option">28</a></li>
+        <li class="select_item _item_29"><a href="#" class="option">29</a></li>
+        <li class="select_item _item_30"><a href="#" class="option">30</a></li>
+        <li class="select_item _item_31"><a href="#" class="option">31</a></li>
+    </ul>
+</div>
+        <span class="bar">
+            <span class="blind">부터</span>
+        </span>
+<div id="endYearDiv" class="select w2" >
+    <input type="hidden" id="endYearInput" name="endYearInput" class="_select_input" value="2022"/>
+    <a href="#" id="endYear" class="select_btn">2022</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_2016"><a href="#" class="option">2016</a></li>
+        <li class="select_item _item_2017"><a href="#" class="option">2017</a></li>
+        <li class="select_item _item_2018"><a href="#" class="option">2018</a></li>
+        <li class="select_item _item_2019"><a href="#" class="option">2019</a></li>
+        <li class="select_item _item_2020"><a href="#" class="option">2020</a></li>
+        <li class="select_item _item_2021"><a href="#" class="option">2021</a></li>
+        <li class="select_item _item_2022"><a href="#" class="option">2022</a></li>
+    </ul>
+</div>
+<div id="endMonthDiv" class="select w3" >
+    <input type="hidden" id="endMonthInput" name="endMonthInput" class="_select_input" value="05"/>
+    <a href="#" id="endMonth" class="select_btn">05</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_01"><a href="#" class="option">01</a></li>
+        <li class="select_item _item_02"><a href="#" class="option">02</a></li>
+        <li class="select_item _item_03"><a href="#" class="option">03</a></li>
+        <li class="select_item _item_04"><a href="#" class="option">04</a></li>
+        <li class="select_item _item_05"><a href="#" class="option">05</a></li>
+    </ul>
+</div>
+<div id="endDayDiv" class="select w3" >
+    <input type="hidden" id="endDayInput" name="endDayInput" class="_select_input" value="09"/>
+    <a href="#" id="endDay" class="select_btn">09</a>
+    <ul class="select_list scroll_cst">
+        <li class="select_item _item_01"><a href="#" class="option">01</a></li>
+        <li class="select_item _item_02"><a href="#" class="option">02</a></li>
+        <li class="select_item _item_03"><a href="#" class="option">03</a></li>
+        <li class="select_item _item_04"><a href="#" class="option">04</a></li>
+        <li class="select_item _item_05"><a href="#" class="option">05</a></li>
+        <li class="select_item _item_06"><a href="#" class="option">06</a></li>
+        <li class="select_item _item_07"><a href="#" class="option">07</a></li>
+        <li class="select_item _item_08"><a href="#" class="option">08</a></li>
+        <li class="select_item _item_09"><a href="#" class="option">09</a></li>
+    </ul>
+</div>
+    </div>
+    <p class="form_row_desc dot_ver">2016년 1월 이후 조회할 수 있습니다.</p>
+</div>
+<div class="form_row mb4">
+    <strong class="title">범위</strong>
+    <div class="set_col set_target_chk _checkbox_ui">
+        <div class="set_chk">
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_device_0" class="chk _check_all">
+                <label class="lbl" for="item_device_0">전체</label>
+            </span>
+            <span class="_item_check_div _device_div" style="margin-left:11px;">
+                <span class="select_chk v1">
+                    <input type="checkbox" id="item_device_1" value="mo" class="chk" >
+                    <label class="lbl" for="item_device_1">모바일</label>
+                </span>
+                <span class="select_chk v1">
+                    <input type="checkbox" id="item_device_2" value="pc" class="chk" >
+                    <label class="lbl" for="item_device_2">PC</label>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="form_row mb4">
+    <strong class="title">성별</strong>
+    <div class="set_col set_target_chk _checkbox_ui">
+        <div class="set_chk">
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_gender_0" class="chk _check_all">
+                <label class="lbl" for="item_gender_0">전체</label>
+            </span>
+            <span class="_item_check_div _gender_div" style="margin-left:11px;">
+                <span class="select_chk v1">
+                    <input type="checkbox" id="item_gender_1" class="chk" value="f" >
+                    <label class="lbl" for="item_gender_1">여성</label>
+                </span>
+                <span class="select_chk v1">
+                    <input type="checkbox" id="item_gender_2" class="chk" value="m" >
+                    <label class="lbl" for="item_gender_2">남성</label>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="form_row">
+    <strong class="title v2">연령선택</strong>
+    <div class="set_col set_target_chk _checkbox_ui">
+        <div class="set_chk">
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_0" class="chk _check_all">
+                <!-- [D] 텍스트 활성화 active 추가 -->
+                <label class="lbl " for="item_age_0">전체</label>
+            </span>
+        </div>
+        <div class="set_chk _item_check_div _age_div">
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_1" value="1"  class="chk">
+                <label class="lbl " for="item_age_1">~12</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_2" value="2"  class="chk">
+                <label class="lbl " for="item_age_2">13~18</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_3" value="3"  class="chk">
+                <label class="lbl " for="item_age_3">19~24</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_4" value="4"  class="chk">
+                <label class="lbl " for="item_age_4">25~29</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_5" value="5"  class="chk">
+                <label class="lbl " for="item_age_5">30~34</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_6" value="6"  class="chk">
+                <label class="lbl " for="item_age_6">35~39</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_7" value="7"  class="chk">
+                <label class="lbl " for="item_age_7">40~44</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_8" value="8"  class="chk">
+                <label class="lbl " for="item_age_8">45~49</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_9" value="9"  class="chk">
+                <label class="lbl " for="item_age_9">50~54</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_10" value="10"  class="chk">
+                <label class="lbl " for="item_age_10">55~60</label>
+            </span>
+            <span class="select_chk v1">
+                <input type="checkbox" id="item_age_11" value="11"  class="chk">
+                <label class="lbl " for="item_age_11">60~</label>
+            </span>
+        </div>
+    </div>
+</div>
+                                </div>
+                                <a href="#" class="ca_btn_go _trend_search_detail_query">
+                                    <span class="text">네이버 검색 데이터 조회</span>
+                                </a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_home_local">
+            <div class="com_title">
+                <h4 class="title">지역통계</h4>
+                <em class="desc">네이버 검색데이터와 다른 기관/기업 데이터를 통해 만들어진 정보로 지역별, 업종별 추이를 확인할 수 있습니다.</em>
+            </div>
+            <div class="local_list">
+                <div class="list">
+                    <a href="/local/trend.naver">
+                        <div class="list_thumb">
+                            <img src="https://ssl.pstatic.net/static.datalab/202203250433/img/img_home_local_trend.jpg" width="540" height="230" alt="임시 이미지">
+                        </div>
+                        <div class="list_desc">
+                            <strong class="desc_title">지역별 관심도</strong>
+                            <p class="desc">지역별 관심도는, 네이버에서 매일 발생하는 수 억건의 검색어와 네이버가 가지고 있는 수 백만건의 지역 데이터를 기초로, 조회기간내 지역별/업종별 관심도 정도를 확인할 수 있는 서비스입니다.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="list">
+                    <a href="/local/card.naver">
+                        <div class="list_thumb">
+                            <img src="https://ssl.pstatic.net/static.datalab/202203250433/img/img_home_local_card.jpg" width="540" height="230" alt="임시 이미지">
+                        </div>
+                        <div class="list_desc">
+                            <strong class="desc_title">카드 소비통계</strong>
+                            <p class="desc">카드 소비통계는 전국의 지역별, 업종별로 발생하는 카드 결제 규모를 확인할 수 있는 서비스입니다. 연령별 성별로도 조회할 수 있습니다. 이 카드 소비 데이터는 BC카드에서 제공합니다.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="footer">
+        <div class="footer_inner">
+            <div class="footer_info">
+                <a href="https://policy.naver.com/rules/service.html" target="_blank">이용약관</a>
+                <a href="https://policy.naver.com/rules/privacy.html" target="_blank"><strong>개인정보처리방침</strong></a>
+                <a href="https://policy.naver.com/rules/disclaimer.html" target="_blank">책임의 한계와 법적고지</a>
+                <a href="https://help.naver.com/support/service/main.nhn?serviceNo=14493" target="_blank">고객센터</a>
+            </div>
+            <div class="footer_copyright">
+                <a href="https://www.naver.com/" target="_blank" class="sp_footer_logo"><span class="blind">NAVER</span></a>
+                <em class="copyright">Copyright ©</em>
+                <strong><a href="https://www.navercorp.com/ko/index.nhn" target="_blank">NAVER Corp.</a></strong> All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="com_browser_pop" style="display:none">
+    <div class="pop_dimmed"></div>
+    <div class="pop_inner type_browser" style="z-index:100">
+        <strong class="browser_title">권장 브라우저 안내</strong>
+        <p class="browser_desc">
+            데이터랩 서비스에 최적화된 브라우저는 Internet Explorer11이상입니다.<br>
+            최신 브라우저로 업그레이드를 해야 서비스 이용이 가능합니다.
+        </p>
+        <div class="browser_list">
+			<span class="list ie">
+				<span class="title">Internet Explore</span>
+			</span>
+            <span class="list firefox">
+				<span class="title">Firefox</span>
+			</span>
+            <span class="list chrome">
+				<span class="title">Google Chrome</span>
+			</span>
+            <span class="list safari">
+				<span class="title">Safari</span>
+			</span>
+        </div>
+        
+			
+				
+				
+			
+        
+        <a href="#" class="sp_btn_pop_close">
+            <span class="blind">권장 브라우저 안내 팝업 닫기</span>
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript">
+(function() {
+    window.$DATALAB = (typeof $DATALAB != "undefined") ? $DATALAB : {};
+    window.$DATALAB.CONFIG = (typeof $DATALAB.CONFIG != "undefined") ? $DATALAB.CONFIG : {};
+
+    $DATALAB.CONFIG.request_url = "'http://datalab.naver.com/";
+    $DATALAB.CONFIG.realTimeOpenDate = "";
+
+    if(location.href.indexOf("dev") > 0) {
+        window.lcs_SerName = "alpha-lcs.naver.com";
+    }
+})();
+</script>
+<script type="text/javascript" src="https://ssl.pstatic.net/static.datalab/202203250433/js/vendor.202203250433.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="https://ssl.pstatic.net/static.datalab/202203250433/js/home.202203250433.js"></script>
+
+</body>
+</html>
